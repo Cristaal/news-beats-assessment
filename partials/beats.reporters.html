@@ -3,27 +3,29 @@
   <ul>
     <li ng-repeat="item in beat.reporters">
       <h3>Reporter Name: {{ item.name }} </h3>
-      <!-- <h3>Length of Employment: {{ item.employment }} </h3>
-      <h3>Date of Birth: {{ item.birthday }} </h3> -->
+      <h3>Length of Employment: {{ item.employment }} </h3>
+      <h3>Date of Birth: {{ item.birthday }} </h3>
     </li>
   </ul>
 </div
 
-
 <div>
-  <h2>Add a reporter to this beat</h2>
-  <form ng-submit="addReporter()" class="form-inline" role="form">
-    <div class="form-group">
-      <input type="text" ng-model="beat.reporter" class="form-control" placeholder="Enter Reporter's Name">
-    </div>
-    <div class="form-group">
-      <input type="text" ng-model="beat.duration" class="form-control" placeholder="Enter Years Here">
-    </div>
-    <div class="form-group">
-      <input type="text" ng-model="beat.birthday" class="form-control" placeholder="Date of Birth">
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
+  <h2>Add a reporter to {{ beat.name }}</h2>
+    <form ng-submit="addReporter()" class="form-inline" role="form">
+      <div class="form-group">
+        <input type="text" ng-model="beat.reporter" class="form-control" placeholder="Enter Reporter's Name">
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="beat.duration" class="form-control" placeholder="Enter Years Here">
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="beat.birthday" class="form-control" placeholder="Date of Birth">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
+
 
 
 
