@@ -2,8 +2,7 @@
   <h1>Here are your News Beats:</h1>
   <ul>
     <li ng-repeat="item in beats">
-      <a ng-bind="item.name"></a>
-      <a ui-sref="beats.reporters({ beatId: item.id })"></a>
+      <a ui-sref="reporters({ beatId: item.id })">{{ item.name }}</a>
     </li>
   </ul>
 </div>
@@ -19,5 +18,4 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
-
-<a href='/'>Click here to go to the main page</a>
+<div ui-view> </div>
